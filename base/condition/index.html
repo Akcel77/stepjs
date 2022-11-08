@@ -4,9 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Condition</title>
+
+    <script>
+    const age = 16
+    if(true){
+        console.log(age)
+    }
+        
+    const pays = 'US'
+    const peutConduireFrance = age >= 18 && pays === 'FR'
+    const peutConduireUs = age >= 16 && pays === 'US'
+
+    //Condition classique       
+    if (peutConduireFrance){
+        console.log('Vous avez le droit de conduire en France')
+    } else if (peutConduireUs){
+        console.log('Vous avez le droit de conduire aux US')
+    } else {
+        console.log('Vous n\'avez pas le droit de conduire')
+    }
+    
+    //Condition negative
+    if(!peutConduireFrance){
+        console.log('Vous n\'avez pas le droit de conduire en France')
+    } else {
+        console.log('Vous avez le droit de conduire en France')
+    }
+
+    //Switch case verifie la valeur d'une variable avec plusieurs valeurs
+    switch (pays) {
+        case 'FR':
+            console.log('Vous êtes en France')
+            break;
+        case 'US':
+            console.log('Vous êtes aux US')
+            break;
+        default:
+            console.log('Vous êtes ailleurs')
+            break;
+    }
+
+    
+    //Exercice 1 Recommander un film a l'utilisateur en fonction de son age
+    const userAge = prompt('Quel est votre age ?')    
+
+    const film1 = "Lilo et Stitch"//-13
+    const film2 = "Matrix"//13-18
+    const film3 = "Evil Dead"//18
+
+    if(userAge <= 13){
+        console.log('Nous vous recommandons le film ' + film1)
+    } else if (userAge < 18){
+        console.log('Nous vous recommandons le film ' + film2)
+    } else {
+        console.log('Nous vous recommandons le film ' + film3)
+    }
+
+    //Exercice 2 Recommander un film a l'utilisateur en fonction de son annee de naissance
+    const year = 2022
+    const userYear = prompt('Quel est votre annee de naissance ?')
+    const actualUserAge = year - userYear
+   
+    if( actualUserAge <= 13){
+        console.log('Nous vous recommandons le film ' + film1)
+    } else if (actualUserAge < 18){
+        console.log('Nous vous recommandons le film ' + film2)
+    } else {
+        console.log('Nous vous recommandons le film ' + film3)
+    }
+
+    //Exercice 3 Demander a l'utiliser deux nombre puis lui dire si le total est positif ou negatif
+    const number1 = prompt('Entrez un nombre')
+    const number2 = prompt('Entrez un autre nombre')
+    const total = number1 * number2
+    let signe 
+
+    if (total >= 0){
+        signe = 'positif'
+    } else {
+        signe = 'negatif'
+    }
+    console.log(`${number1} x ${number2} = ${total} est ${signe}`)
+
+
+
+    </script>
 </head>
 <body>
-    
+    <h1>Les conditions</h1>
 </body>
 </html>
