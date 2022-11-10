@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boucle</title>
+
+    <script>
+        let j = 0
+        while (j < 10) {
+            console.log(j)
+            j++
+        }
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i)
+        }
+
+        
+        const notes = [12,13,17,20]
+
+        //parcourir un tableau
+        for (let m = 0; m < notes.length; m++) {
+            console.log(notes[m])
+            //>>print each element of the array
+        }
+
+        //Parcourir un tableau avec une boucle for in
+        for(let k in notes){
+            console.log(notes[k])
+            //>>print each element of the array
+        }
+
+        const person = {
+            name: 'John',
+            age: 25,
+            city: 'Paris'
+        }
+
+        //Parcourir un objet avec une boucle for of
+        for(let k in person){
+            console.log(person[k])
+            //>>print each value of the object
+            console.log(person)
+            //>>print the object
+        }
+        
+        const greeding = 'Bonjour'
+        for(let k of greeding){
+            console.log(k)
+        }
+        //>>print each letter of the string
+
+        for(let k in greeding){
+            console.log(k)
+        }//>print the index of each letter of the string
+
+
+
+        //Exercice 1
+        //Demander a l'utilisateur de rentrer un nombre
+        //Verifier si le nombre est entre 0 et 10
+        //Si non message erreur
+        //Si Oui afficher tous les chiffres de 0 a ce nombre
+        let userNumber = prompt('Veuillez rentrer un nombre entre 0 et 10')
+        if(userNumber >= 0 && userNumber <= 10){
+           while(userNumber >= 0){
+               console.log(userNumber)
+               userNumber--
+           }
+        } else {
+            console.log('Erreur')
+        }
+
+        //Exercice 2
+        //Creer une variable qui contient un nombre
+        //L'utilisateur doit deviner ce nombre
+        //Si il trouve le nombre, afficher un message de felicitation
+        //Si il ne trouve pas le nombre, afficher un message d'erreur
+        //Et redmander a l'utilisateur de rentrer un nombre
+
+        const randomNumber = Math.floor(Math.random() * 10)
+        console.log(randomNumber)
+        let userNumber2 = prompt('Veuillez rentrer un nombre entre 0 et 10')
+        if(userNumber2 === randomNumber){
+                console.log('Bravo')
+            }else {
+                while(userNumber2 != randomNumber){
+                userNumber2 = prompt('Veuillez deviner un nombre entre 0 et 10') * 1
+                console.log('Ceci n\'est pas le bon nombre')
+            }
+        
+             
+        }
+
+
+        
+
+    </script>
+</head>
+<body>
+    <h1>Les boucles</h1>
+</body>
+</html>
